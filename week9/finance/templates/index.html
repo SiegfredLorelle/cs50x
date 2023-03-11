@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    {% if infos %}
+        <div class="mb-5">
+            <h3>{{ username }}'s Portolio<h3>
+        </div>
+    {% else %}
+        <div class="mb-5">
+            <h3>{{ username }}'s Portolio<h3>
+        </div>
+    {% endif %}
+    <div class="mb-5 px-5">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if infos %}
+                    {% for row in infos %}
+                        <tr>
+                            <th scope="row"> {{ row["stock_symbol"] }} </th>
+                            <td>{{ row["stock_name"] }}</td>
+                            <td>{{ row["number_of_shares"] }}</td>
+                            <td>{{ row["live_price"] }}</td>
+                            <td>{{ row["live_total"]  }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>No shares owned</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {% endif %}
+            </tbody>
+            <tfoot>
+                {% if infos %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>Cash</th>
+                        <th>{{ cash }}</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>TOTAL</th>
+                        <th>{{ total }}</th>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>Cash</th>
+                        <th>{{ cash }}</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>TOTAL</th>
+                        <th>{{ cash }}</th>
+                    </tr>
+                {% endif %}
+
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

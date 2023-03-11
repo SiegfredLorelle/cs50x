@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkAnsPart1(userAns)
+            {
+                // If correct, change the color of the box to green and print correct
+                if (userAns == choice2)
+                {
+                    userAns.style.backgroundColor = "green";
+                    document.querySelector("#p1").innerText = "Correct!";
+                }
+                // If wrong, change the color of box to red and print incorrect
+                else
+                {
+                    userAns.style.backgroundColor = "red";
+                    document.querySelector("#p1").innerText = "Incorrect";
+                }
+            }
+
+            function checkAnsPart2(textBox)
+            {
+                // Get the exact string the user entered
+                let userAns = document.querySelector("#ans").value;
+                // If no answers were given, print an error
+                if (userAns == "")
+                {
+                    document.querySelector("#p2").innerText = "No answer given";
+                    textBox.style.backgroundColor = "#fff";
+
+                }
+                // Check if the answer given matches to the correct answer regardless of capitalization
+                else if (userAns.trim().toLowerCase() === "manila")
+                {
+                    document.querySelector("#p2").innerText = "Correct!";
+                    textBox.style.backgroundColor = "green";
+                }
+                // If wrong
+                else
+                {
+                    document.querySelector("#p2").innerText = "Incorrect";
+                    textBox.style.backgroundColor = "red";
+
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which of the following color is NOT in the Philippine Flag?</h3>
+                <button id="choice1" onClick="checkAnsPart1(choice1);">Red</button>
+                <button id="choice2" onClick="checkAnsPart1(choice2);">Green</button>
+                <button id="choice3" onClick="checkAnsPart1(choice3);">Blue</button>
+                <p id="p1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the capital of The Philippines?</h3>
+                <form>
+                    <input autocomplete="off" id= "ans" type="text">
+                    <button onClick="checkAnsPart2(ans); return false;">Check Answer</button>
+                    <p id="p2"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

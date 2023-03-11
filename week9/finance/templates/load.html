@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Load
+{% endblock %}
+
+
+{% block main %}
+    <div class="mb-5">
+        <h3>Load</h3>
+    </div>
+    <div class="mb-4">
+        <h4>Current Balance: {{ balance }}</h4>
+    </div>
+    <form action="/load" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="amount" name="amount" placeholder="e.g., 50000" type="number" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Load Cash</button>
+    </form>
+
+{% endblock %}

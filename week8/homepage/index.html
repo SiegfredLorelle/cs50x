@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Favorite Anime</title>
+    </head>
+    <body>
+        <div id="header">
+            <div class="fixed-top">
+                <div class="container-fluid" id="top-bar-container">
+                    <div class="p-1 mb-0 bg-dark bg-gradient text-white">
+                        <div id="search-box">
+                            <a href="https://anilist.co/search/anime/top-100" target="_blank">
+                            <img src="SearchLogo.png" id="search-pic" alt="search logo">
+                            </a>
+                        </div>
+                        <div id="title-block">
+                            <a id="link-home" href="index.html">
+                                <p class="website-title">My Favorite Anime</p>
+                                <br>
+                                <p>Siegfred's Anime Preferences</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid" id="menu-container">
+                    <div class="shadow-sm p-0 mb-0 text-white">
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="anime.html">Anime</a></li>
+                            <li><a href="characters.html">Characters</a></li>
+                            <li><a href="https://themes.moe/" id="music" target="_blank">Music</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="pic-part-container">
+            <div class="p-0 mb-0 bg-light bg-gradient text-dark">
+                <br>
+                <div id="anime-logo">
+                    <div class="container">
+                        <div class="row g-0">
+                          <div class="col text-start">
+                            <a class="link-title" href="https://anilist.co/anime/21827/Violet-Evergarden/" target="_blank">
+                                <div id="anime-title">
+                                    <p class="font-monospace"><strong>Violet</strong></p>
+                                    <br>
+                                    <p class="font-monospace"> Evergarden</p>
+                                </div>
+                            </a>
+                        </div>
+                          <div class="col text-center">
+                            <a class="link-title" href="https://anilist.co/anime/101348/Vinland-Saga/" target="_blank">
+                                <div>
+                                    <p class="font-monospace"><strong>Vinland</strong></p>
+                                    <br>
+                                    <p class="font-monospace">Saga</p>
+                                </div>
+                            </a>
+                        </div>
+                          <div class="col text-end">
+                            <a class="link-title" href="https://anilist.co/anime/9253/SteinsGate/" target="_blank">
+                                <div>
+                                    <p class="font-monospace"><strong>Steins;</strong></p>
+                                    <br>
+                                    <p class="font-monospace">Gate</p>
+                                </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <br>
+                <div id="pic-center">
+                    <img src="VE.jpg" class="float-start" alt="Violet Evergarden" id="VE">
+                    <img src="VS.jpg" class="float-center" alt="Vinland Saga" id="VS">
+                    <img src="SG.jpg" class="float-end" alt="Steins Gate" id="SG">
+                </div>
+            </div>
+        </div>
+        <section class="container-fluid" id="vid-part-container">
+            <div>
+                <a class="link-title" href="https://anilist.co/anime/128546/Vivy-Fluorite-Eyes-Song/" target="_blank">
+                <h3 class="font-monospace" id="Vivy-title">Vivy: Fluorite Eye's Song</h3>
+                </a>
+            </div>
+            <div class="ratio ratio-16x9">
+                 <iframe src="https://www.youtube.com/embed/Y653dJQ_ecs?rel=0&autoplay=1&mute=1&playlist=Y653dJQ_ecs&loop=1" title="Youtube Video" allow="autoplay;" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section>
+            <div class="shadow p-3 mb-3 bg-body rounded"></div>
+            <div class="card-body">
+                <h5 class="card-title">Credits</h5>
+                <p class="card-text">More details about the website</p>
+                <a href="about.html" class="btn btn-primary">Continue</a>
+            </div>
+        </section>
+        <script>
+            document.querySelector("#search-box").addEventListener("click", function() {
+                alert("Sorry,\nThere is NO anime database yet.\nYou will be redirected to 'Anilist'.")
+            });
+            document.querySelector("#music").addEventListener("click", function() {
+                alert("Sorry,\nThere is NO database for anime music yet.\nYou will be redirected to 'Themes.moe'.")
+            });
+        </script>
+    </body>
+</html>
+
+

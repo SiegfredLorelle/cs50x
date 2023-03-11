@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+    <div class="mb-5">
+        <h3>Account</h3>
+    </div>
+
+    <div class="mb-3">
+        <h5>Username: {{ username }}</h5>
+    </div>
+        <div class="mb-4">
+        <form action="/password" method="get">
+            <button class="btn btn-primary">Change Password</button>
+        </form>
+    </div>
+    <div class="mb-3">
+        <h5>Balance: {{ cash }}</h5>
+    </div>
+    <div class="mb-3">
+        <form action="/load" method="get">
+            <button class="btn btn-primary">Load Balance</button>
+        </form>
+    </div>
+{% endblock %}

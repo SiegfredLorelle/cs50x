@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: It takes the longest when sorting in a reversed order. This hints toward the Bubble sort since the lowest number is at the end, which means it will take a lot of steps to reach its appropriate location. It is faster than sort3 (sometimes even sort2) when sorting a sorted order. The lower boundary of the Bubble sort is omega n which further proves that the Bubble sort works well in already sorted numbers.
+
+sort2 uses: Merge sort
+
+How do you know?: Sorting of randomly ordered numbers shows that it has a significantly faster time when compared to sort1 and sort3. This hints to merge sort since its upper boundary is O n log n which is significantly better than n^2 of selection and bubble sort.
+
+sort3 uses: Selection sort
+
+How do you know?: It is faster than sort1 when sorting reversed order. This hints at selection sort because bubble sort naturally takes a lot of time when sorting reversed order. It is slower than sort1 when sorting sorted order. Selection sort would be slow when sorting an already sorted number because its lower boundary is omega n^2 which is worst than Bubble sort and Merge sort.

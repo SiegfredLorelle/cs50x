@@ -1,0 +1,141 @@
+[src] {
+  display: inline;
+  max-width: 100%;
+  height: auto;
+}
+
+.container-fluid, .container {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline;
+}
+
+#menu-container a:visited, #menu-container a:link {
+  color: #fff;
+}
+
+p {
+  margin: 5px;
+  display: inline;
+}
+
+#title-block {
+  display: inline;
+}
+
+#search-box {
+  display: inline;
+  float: right;
+  margin-top: 10px;
+  height: 100%;
+  width: 40px;
+}
+
+#anime-logo {
+  width: 100%;
+  display: inline;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#VE, #VS, #SG {
+  width: 33.33%;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.website-title {
+  font-size: 1.25rem!important;
+  font-weight: 700!important;
+}
+
+#link-home {
+  color: #fff!important;
+}
+
+.link-title {
+  color: #212529!important;
+}
+
+a:hover {
+  color: #a39b9b!important;
+}
+
+#vid-part-container {
+  padding: 1.5rem!important;
+  border-width: 0.2rem;
+}
+
+[title] {
+  height: 100%!important;
+}
+
+#Vivy-title {
+  padding-bottom:  0.75rem;
+  font-weight: bolder;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #343a40;
+  margin: 0;
+  padding: 0.5rem;
+  background-image: var(--bs-gradient)!important;
+}
+
+ul li {
+  float: left;
+  text-align: center;
+}
+
+li a {
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Margin to compensate for the header */
+#pic-part-container, #about, #anime, #characters {
+  margin-top: 7rem!important;
+}
+
+#pic-center img:hover {
+  margin-bottom: 0rem !important;
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.card-body, #about, #anime, #characters{
+  padding: 2%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-links, #about-title {
+  color: #212529;
+}
