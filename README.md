@@ -12,25 +12,27 @@
 ---
 ### Description
 
-[CS50x](https://cs50.harvard.edu/x) is Harvard University's introduction to the intellectual enterprises of computer science and the art of programming. It is an entry-level course, taught by [David J. Malan](https://cs.harvard.edu/malan/), that teaches how to think algorithmically and solve problems efficiently.
+[CS50x](https://cs50.harvard.edu/x) is Harvard University's introduction to the intellectual enterprises of computer science and the art of programming. It is an entry-level course taught by [David J. Malan](https://cs.harvard.edu/malan/). The course teaches how to think algorithmically and solve problems efficiently.
 
-Note that this repository only includes problems sets and labs in the course. The [final project](https://github.com/SiegfredLorelle/compiled-50) is excluded since it is in a different repository.
+Note that this repository only includes problem sets and labs in the course. The [final project](https://github.com/SiegfredLorelle/compiled-50) is excluded since it is in a different repository.
 
 #### Technologies
 
 - Scratch
 - C
 - Python
-- Sqlite
+- SQLite
 - HTML, CSS, Javascript
 - Bootstrap
 - Flask
+
+[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
 
 ---
 
 ### Requirements
 
-The following requirement are only necessary if projects are not run in the [CS50 Codespace](https://cs50.readthedocs.io/code/), since the codespace already have them installed (along with other dependencies).
+The following requirements are only necessary if projects are not run in the [CS50 Codespace](https://cs50.readthedocs.io/code/), since the codespace already has them installed (along with other dependencies).
 
 #### General Requirements:
 
@@ -42,6 +44,8 @@ The following requirement are only necessary if projects are not run in the [CS5
 #### Specific Requirements:
 
 - Week 9 - Finance has more requirements. See more in its respective directory.
+
+[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
 
 ---
 
@@ -87,6 +91,8 @@ The following requirement are only necessary if projects are not run in the [CS5
     - [Finance](https://cs50.harvard.edu/x/2022/psets/9/finance/)
 - [Final Project](https://github.com/SiegfredLorelle/compiled-50)
 
+[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+
 ---
 
 ### Credits and References
@@ -95,16 +101,16 @@ All problem sets and labs, and the entire CS50 course is credited to the [CS50 t
 
 Only the answers to problem sets and labs are produced by the [author](#author-info).
 
+[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+
 ---
 
 ### Author Info
 
-- Github - [SiegfredLorelle](https://github.com/SiegfredLorelle)
+- GitHub - [SiegfredLorelle](https://github.com/SiegfredLorelle)
 
 - Facebook - [Siegfred Mina](https://www.facebook.com/profile.php?id=1718881634)
 
 - LinkedIn - [Siegfred Lorelle Mina](https://www.linkedin.com/in/siegfred-lorelle-mina-b4900b167)
 
-
-<!-- TODO: LINK EACH PSET AND LABS -->
-<!-- TODO: SEPERATE FINAL PROJ AND REDIRECT TO MY OTHER REPO -->
+[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
