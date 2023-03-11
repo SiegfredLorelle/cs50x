@@ -10,7 +10,7 @@
 - [Author Info](#author-info)
 
 ---
-### Description
+## Description
 
 [CS50x](https://cs50.harvard.edu/x) is Harvard University's introduction to the intellectual enterprises of computer science and the art of programming. It is an entry-level course taught by [David J. Malan](https://cs.harvard.edu/malan/). The course teaches how to think algorithmically and solve problems efficiently.
 
@@ -30,7 +30,7 @@ Note that this repository only includes problem sets and labs in the course. The
 
 ---
 
-### Requirements
+## Requirements
 
 The following requirements are only necessary if projects are not run in the [CS50 Codespace](https://cs50.readthedocs.io/code/), since the codespace already has them installed (along with other dependencies).
 
@@ -49,7 +49,7 @@ The following requirements are only necessary if projects are not run in the [CS
 
 ---
 
-### Problem Sets & Labs
+## Problem Sets & Labs
 
 - Week 0 Scratch
     - [Scratch](https://cs50.harvard.edu/x/2022/psets/0/scratch/)
@@ -95,7 +95,7 @@ The following requirements are only necessary if projects are not run in the [CS
 
 ---
 
-### Credits and References
+## Credits and References
 
 All problem sets and labs, and the entire CS50 course is credited to the [CS50 team](https://cs50.harvard.edu/x/2022/).
 
@@ -105,7 +105,7 @@ Only the answers to problem sets and labs are produced by the [author](#author-i
 
 ---
 
-### Author Info
+## Author Info
 
 - GitHub - [SiegfredLorelle](https://github.com/SiegfredLorelle)
 
