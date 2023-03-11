@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Inheritance
+{% endblock %}
+
+{% block main %}
+    <div class="mb-5">
+        <h1 class="py-3" id="inheritance-title">INHERITANCE</h1>
+        <h6>Determines a possible blood type combination of a three generation family.</h6><br>
+    </div>
+
+    <form actions="/inheritance" method="post">
+        <div class="mt-5 mb-2 mb-3">
+            <select autofocus class="form-select form-select-lg mb-3 mx-auto w-auto" aria-label=".form-select-lg example" id="generation" name="generation">
+                <option disabled hidden selected>Choose a generation ...</option>
+                <option>grandparent</option>
+                <option>parent</option>
+                <option>child</option>
+            </select>
+        </div>
+
+        <div class="row mx-auto w-auto" id="allele-box">
+            <div class="col">
+                <select class="form-select" aria-label="Default select example" id="allele-1" name="allele-1">
+                    <option disabled hidden selected>Choose an allele ...</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>O</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-select" aria-label="Default select example" id="allele-2" name="allele-2">
+                    <option disabled hidden selected>Choose an allele ...</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>O</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="btn btn-dark mt-4" name="submit" type="submit" value="submit">Submit</button>
+
+        <h5 class="py-4" id="or"><span class="line-center">OR</span></h5>
+
+        <button class="btn btn-secondary mb-5" name="submit" type="submit" value="randomize">Randomize All</button>
+    </form>
+
+
+    {% if family %}
+        <!-- Credits to: https://www.cssscript.com/responsive-hierarchical-organization-chart-pure-css/  -->
+        <div class="mt-5 mb-4 mx-4">
+            <ol class="organizational-chart">
+                <li>
+                <div>
+                    <h1>Child</h1>
+                    <p class="mb-0">🧬Alleles: {{ family[6].get("allele_1") }}{{ family[6].get("allele_2") }}</p>
+                    <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[6].get("bloodtype") }}</span></p>
+                </div>
+                <ol>
+                    <li>
+                    <div>
+                        <h2>Parent 1</h2>
+                        <p class="mb-0">🧬Alleles: {{ family[4].get("allele_1") }}{{ family[4].get("allele_2") }}</p>
+                            <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[4].get("bloodtype") }}</span></p>
+
+                    </div>
+                    <ol>
+                        <li>
+                        <div>
+                            <h3>Grandparent 1</h3>
+                            <p class="mb-0">🧬Alleles: {{ family[0].get("allele_1") }}{{ family[0].get("allele_2") }}</p>
+                            <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[0].get("bloodtype") }}</span></p>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <h3>Grandparent 2</h3>
+                            <p class="mb-0">🧬Alleles: {{ family[1].get("allele_1") }}{{ family[1].get("allele_2") }}</p>
+                            <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[1].get("bloodtype") }}</span></p>
+                        </div>
+                        </li>
+                    </ol>
+                    </li>
+                    <li>
+                    <div>
+                        <h2>Parent 2</h2>
+                        <p class="mb-0">🧬Alleles: {{ family[5].get("allele_1") }}{{ family[5].get("allele_2") }}</p>
+                            <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[5].get("bloodtype") }}</span></p>
+                    </div>
+                    <ol>
+                        <li>
+                        <div>
+                            <h3>Grandparent 3</h3>
+                            <p class="mb-0">🧬Alleles: {{ family[2].get("allele_1") }}{{ family[2].get("allele_2") }}</p>
+                            <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[2].get("bloodtype") }}</span></p>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <h3>Grandparent 4</h3>
+                            <p class="mb-0">🧬Alleles: {{ family[3].get("allele_1") }}{{ family[3].get("allele_2") }}</p>
+                            <p class="mb-0">🩸Blood Type: <span class="fw-bold">{{ family[3].get("bloodtype") }}</span></p>
+                        </div>
+                        </li>
+                    </ol>
+                    </li>
+                </ol>
+                </li>
+            </ol>
+        </div>
+        <br><br>
+    {% endif %}
+
+
+    <div class="text-start p-3">
+        <details>
+            <summary class="fw-bold">More details</summary>
+            <ul class="">
+                <li class="mx-3">
+                    Your input is always indexed at 1 (e.g., grandparent 1 or parent 1).
+                </li>
+                <li class="mx-3">
+                    All blood type alleles (A, B and O) have equal chances to appear and be inherited.
+                </li>
+            </ul>
+        </details>
+    </div>
+
+    {% endblock %}

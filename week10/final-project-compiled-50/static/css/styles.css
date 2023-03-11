@@ -1,0 +1,746 @@
+/* all pages */
+
+.form-control:focus, .form-select:focus {
+    color: #212529;
+    background-color: #ffffff;
+    border-color: #565e64;
+    box-shadow: 0 0 0 0.25rem rgb(130 138 145 / 50%);
+}
+
+
+
+/* Homepage */
+
+.nav-header {
+    place-items: start;
+    list-style: none;
+}
+
+#navbarDropdown {
+    color: white;
+}
+
+#title-container {
+    height:95vh;
+    width: 100%;
+}
+
+#left-side .nav-header nav .container-fluid li .nav-link, .nav-button-left {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+
+#right-side .nav-header nav .container-fluid li .nav-link, .nav-button-right {
+    background-color: rgb(200, 200, 200);
+    color: black;
+}
+
+@media only screen and (max-width: 1026px) {
+    #signup-btn {
+        display: none;
+    }
+}
+
+.dropdown-menu {
+    background-color: white;
+}
+
+@media only screen and (max-width: 1026px) {
+    #account-dropdown {
+        display: block;
+    }
+    #home-logout-btn, #home-account-btn {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1026px) {
+    #account-dropdown {
+        display: none;
+    }
+    #home-logout-btn, #home-account-btn {
+        display: block;
+    }
+}
+
+#project-item.active, #project-item:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #000000;
+}
+
+#title-container .side {
+    height:95vh;
+    width: 100%;
+
+    display: grid;
+
+    overflow: hidden;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1026px) {
+    #title-container, #title-container > .side{
+        height: 65vh;
+    }
+}
+
+
+#title-container #left-side {
+    background-color: black;
+    color: white;
+    z-index: 2;
+}
+
+#title-container #right-side {
+    background-color: white;
+    color: black;
+}
+
+.side .title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 10vw;
+    margin: 0px 15vw;
+    width: 70vw;
+}
+
+ .side .description {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3vw;
+    line-height: 0.8em;
+    margin: 0px 15vw;
+    width: 70vw;
+}
+
+#sample-projects {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+}
+
+
+#title-footer a{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+footer ul .nav-item #footer-item {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+ #title-footer a:hover, footer ul .nav-item #footer-item:hover {
+    color: white;
+}
+
+ #title-footer a::before, footer ul .nav-item #footer-item::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+#title-footer a:hover::before, footer ul .nav-item #footer-item:hover::before {
+    transform: scaleX(1);
+}
+
+footer p {
+    color: white;
+}
+
+footer ul .nav-item a {
+    color: white!important;
+}
+
+
+/* Layout page*/
+
+.container-fluid #title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0,0,0,.1);
+}
+
+.navbar-light .navbar-nav .nav-link, .container-fluid #title {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .container-fluid #title:hover {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link::before, .container-fluid #title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before, .container-fluid #title:hover::before {
+    transform: scaleX(1);   
+}
+
+div ul li #nav-tabs, div ul li #navbarDarkDropdownMenuLink {
+    color: white!important;
+}
+
+#dropdown-projects.active, #dropdown-projects:active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+/* Login Layout */
+
+#login-background {
+    background-color: black;
+    text-decoration: none;
+}
+
+#login-background > a {
+    text-decoration: none;
+}
+
+#login-background > p > a {
+    position: relative;
+    color:white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 400%;
+    text-decoration: none;
+}
+
+#login-background > p > a:hover {
+    color:white;
+}
+
+#login-background > p > a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#login-background > p > a:hover::before {
+    transform: scaleX(1);
+}
+
+#login-box {
+    background-color:white;
+
+}
+
+/* Login */
+
+#info-button {
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+#info-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Mario page */
+
+#mario-title {
+    font-family: 'Silkscreen', cursive;
+}
+
+#mario-block {
+    width: 100% ;
+    height: auto;
+}
+
+
+#mario-empty-block {
+    filter: brightness(1000);
+    width: 100% ;
+    height: auto;
+}
+
+/* Credit page  */
+
+#credit-title {
+    font-family: 'Kanit', sans-serif;
+}
+#copy-btn-bg, #copy-btn-text {
+    background-color: white;
+    padding-left: 8px;
+    padding-right: 7px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+#copy-btn-bg:hover, #copy-btn-text:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.credit-bullet li:before { 
+    content: '💳'; 
+    margin-left: -20px; 
+    margin-right: 10px; 
+} 
+
+#copy-button {
+    font-size: 17px;
+}
+
+/* Scrabble page */
+
+#scrabble-title {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#scrabble-tile {
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+    line-height: 40px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ccc;
+    background: #fce9c1;
+    font-size: 18pt;
+}
+
+
+/* Readability page  */
+
+#readability-title {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#readability-paragraph {
+    max-width: 70vw;
+}
+
+#no-bullet {
+    list-style-type: none;
+}
+
+
+/* Substitution page */
+
+#substitution-title {
+    font-family: 'Noto Sans Vai', sans-serif;
+}
+
+#substitution-key, #substitution-text {
+    max-width: 21rem;
+}
+
+.key-bullet li:before { 
+    content: '🔑'; 
+    margin-left: -20px; 
+    margin-right: 10px; 
+} 
+
+
+/* Plurality page */
+
+#plurality-title {
+    font-family: 'Russo One', sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+    #name-box {
+        max-width: 50vw;
+    }
+}
+
+
+/* Filter page */
+
+#filter-title {
+    font-size: 60px;
+    font-family: 'Shalimar', cursive;
+}
+
+#file-box {
+    max-width: 50vw;
+}
+
+.line-center{
+    margin:0;padding:0 10px;
+    background:#fff;
+    display:inline-block;
+}
+
+/* Credits to: https://stackoverflow.com/questions/16009654/horizontal-line-in-the-middle-of-text */
+#or {
+
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+#or:after{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    border-top:solid 3px rgb(0, 0, 0);
+    z-index:-1;
+}
+
+#random-image {
+    max-width: 15vw; 
+    height: auto;  
+}
+
+#result-image {
+    max-width: 75vw;
+    height: auto;
+}
+
+div .grayscale {
+    filter: grayscale(1);
+}
+
+div .sepia {
+    filter: sepia(1);
+}
+
+div .reflection {
+    transform: scaleX(-1);
+}
+
+div .blur {
+    filter: blur(5px);
+}
+
+
+/* Inheritance page */
+
+#inheritance-title {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+    #allele-box {
+        max-width: 30vw;
+    }
+}
+
+
+/* Credits to: https://www.cssscript.com/responsive-hierarchical-organization-chart-pure-css/ */
+
+ol.organizational-chart,
+ol.organizational-chart ol,
+ol.organizational-chart li,
+ol.organizational-chart li > div {
+    position: relative;
+}
+ol.organizational-chart,
+ol.organizational-chart ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ol.organizational-chart {
+    text-align: center;
+}
+ol.organizational-chart ol {
+    padding-top: 1em;
+}
+ol.organizational-chart ol:before,
+ol.organizational-chart ol:after,
+ol.organizational-chart li:before,
+ol.organizational-chart li:after,
+ol.organizational-chart > li > div:before,
+ol.organizational-chart > li > div:after {
+    background-color: #313131;
+    content: '';
+    position: absolute;
+}
+ol.organizational-chart ol > li {
+    padding: 1em 0 0 1em;
+}
+ol.organizational-chart > li ol:before {
+    height: 1em;
+    left: 50%;
+    top: 0;
+    width: 3px;
+}
+ol.organizational-chart > li ol:after {
+    height: 3px;
+    left: 3px;
+    top: 1em;
+    width: 50%;
+}
+ol.organizational-chart > li ol > li:not(:last-of-type):before {
+    height: 3px;
+    left: 0;
+    top: 2em;
+    width: 1em;
+}
+ol.organizational-chart > li ol > li:not(:last-of-type):after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 3px;
+}
+ol.organizational-chart > li ol > li:last-of-type:before {
+    height: 3px;
+    left: 0;
+    top: 2em;
+    width: 1em;
+}
+ol.organizational-chart > li ol > li:last-of-type:after {
+    height: 2em;
+    left: 0;
+    top: 0;
+    width: 3px;
+}
+ol.organizational-chart li > div {
+    background-color: #fff;
+    border-radius: 3px;
+    min-height: 2em;
+    padding: 0.5em;
+}
+/*** PRIMARY ***/
+ol.organizational-chart > li > div {
+    color: white;
+    background-color: rgb(27, 36, 48);
+    margin-right: 1em;
+}
+ol.organizational-chart > li > div:before {
+    bottom: 2em;
+    height: 3px;
+    right: -1em;
+    width: 1em;
+}
+ol.organizational-chart > li > div:first-of-type:after {
+    bottom: 0;
+    height: 2em;
+    right: -1em;
+    width: 3px;
+}
+ol.organizational-chart > li > div + div {
+    margin-top: 1em;
+}
+ol.organizational-chart > li > div + div:after {
+    height: calc(100% + 1em);
+    right: -1em;
+    top: -1em;
+    width: 3px;
+}
+/*** SECONDARY ***/
+ol.organizational-chart > li > ol:before {
+    left: inherit;
+    right: 0;
+}
+ol.organizational-chart > li > ol:after {
+    left: 0;
+    width: 100%;
+}
+ol.organizational-chart > li > ol > li > div {
+    color: white;
+    background-color: rgb(81, 85, 126);
+}
+/*** TERTIARY ***/
+ol.organizational-chart > li > ol > li > ol > li > div {
+    color: white;
+    background-color:   rgb(129, 103, 151);
+}
+
+
+@media only screen and ( min-width: 64em ) {
+    ol.organizational-chart {
+        margin-left: -1em;
+        margin-right: -1em;
+    }
+    /* PRIMARY */
+    ol.organizational-chart > li > div {
+        display: inline-block;
+        float: none;
+        margin: 0 1em 1em 1em;
+        vertical-align: bottom;
+    }
+    ol.organizational-chart > li > div:only-of-type {
+        margin-bottom: 0;
+        width: calc((100% / 1) - 2em - 4px);
+    }
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+        width: calc((100% / 2) - 2em - 4px);
+    }
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+        width: calc((100% / 3) - 2em - 4px);
+    }
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+        width: calc((100% / 4) - 2em - 4px);
+    }
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+        width: calc((100% / 5) - 2em - 4px);
+    }
+    ol.organizational-chart > li > div:before,
+    ol.organizational-chart > li > div:after {
+        bottom: -1em!important;
+        top: inherit!important;
+    }
+    ol.organizational-chart > li > div:before {
+        height: 1em!important;
+        left: 50%!important;
+        width: 3px!important;
+    }
+    ol.organizational-chart > li > div:only-of-type:after {
+        display: none;
+    }
+    ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+    ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+        bottom: -1em;
+        height: 3px;
+        width: calc(50% + 1em + 3px);
+    }
+    ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+        left: calc(50% + 3px);
+    }
+    ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+        left: calc(-1em - 3px);
+    }
+    ol.organizational-chart > li > div + div:not(:last-of-type):after {
+        height: 3px;
+        left: -2em;
+        width: calc(100% + 4em);
+    }
+    /* SECONDARY */
+    ol.organizational-chart > li > ol {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    ol.organizational-chart > li > ol:before,
+    ol.organizational-chart > li > ol > li:before {
+        height: 1em!important;
+        left: 50%!important;
+        top: 0!important;
+        width: 3px!important;
+    }
+    ol.organizational-chart > li > ol:after {
+        display: none;
+    }
+    ol.organizational-chart > li > ol > li {
+        flex-grow: 1;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+    }
+    ol.organizational-chart > li > ol > li:only-of-type {
+        padding-top: 0;
+    }
+    ol.organizational-chart > li > ol > li:only-of-type:before,
+    ol.organizational-chart > li > ol > li:only-of-type:after {
+        display: none;
+    }
+    ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+    ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+        height: 3px;
+        top: 0;
+        width: 50%;
+    }
+    ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+        left: 50%;
+    }
+    ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+        left: 0;
+    }
+    ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+        height: 3px;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/* Trivia page */
+
+#trivia-title {
+    font-family: 'Comforter Brush', cursive;
+}
+
+label .flag {
+    max-width: 15vw;
+    height:auto;
+}
+
+.circle-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+ .circle-container .circle {
+    height: 15px;
+    width: 15px;    
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+ #legend-green:hover {
+    background-color: rgba(25,135,84, 0.6)!important;
+}
+
+ #legend-red:hover {
+    background-color: rgba(220,53,69, 0.6)!important;
+}
+
+
+
+/* Birthday page */
+#birthday-title {
+    font-family: 'Inspiration', cursive;
+}
+
+form > #remove-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+form > #remove-btn > #remove-logo {
+    visibility: hidden;
+}
+
+tr:hover > td > form > #remove-btn > #remove-logo {
+    visibility: visible;
+}

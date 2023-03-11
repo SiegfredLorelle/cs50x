@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Substitution
+{% endblock %}
+
+{% block main %}
+    <h1 class="py-3" id="substitution-title">ꗏUBSTIꔵUTIꗞN</h1>
+    <h6>Encrypt or Decrypt the text based on the given key.</h6><br>
+
+    
+    <div class="pb-5">
+
+        <form action="/substitution" method="post">
+
+            <select autofocus class="form-select mx-auto w-auto mb-4"  id="process" name="process">
+                <option disabled hidden selected>Choose...</option>
+                <option>Encrypt</option>
+                <option>Decrypt</option>
+            </select>
+
+            <div class="input-group mx-auto mb-4" id="substitution-key">
+                <span class="input-group-text">Key</span>
+                <input autocomplete="off" autofocus class="form-control" id="key" minlength="26" maxlength="26" name="key" placeholder="JTREKYAVOGDXPSNCUIZLFBMWHQ" required type="text">
+                <div class="form-text">Must contain 26 unique alphabetical letters.</div>
+            </div>      
+
+            <div class="input-group mx-auto" id="substitution-text">
+                <span class="input-group-text">Text</span>
+                <input autocomplete="off" autofocus class="form-control" id="text" name="text" placeholder="plaintext or ciphertext" required type="text">
+                <div class="form-text">Plaintext to encrypt / ciphertext to decrypt.</div>
+            </div>    
+            
+            <button class="btn btn-dark m-3" type="submit">Enter</button>
+
+        </form>
+
+    </div>
+
+
+    {% if get_flashed_messages(category_filter="success") %}
+        <div class="pb-5">
+            <div class="pb-3">
+                <p class="fs-5 fw-normal">Key: 
+                    <span class="fs-5 fw-normal">{{ key }}</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-bg" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                </p>
+            </div>
+            {% if process == "Encrypt" %}
+                <p class="fs-4 fw-normal">Plaintext: 
+                    <span class="fw-bold">{{ text }}</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-text" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                </p>
+                <p class="fs-4 fw-normal">Ciphertext: 
+                    <span class="fw-bold text-primary">{{ result_text }}</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-text" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                </p>
+
+            {% elif process == "Decrypt" %}
+                <p class="fs-4 fw-normal">Ciphertext: 
+                    <span class="fw-bold">{{ text }}</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-text" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                </p>
+                <p class="fs-4 fw-normal">Plaintext: 
+                    <span class="fw-bold text-primary">{{ result_text }}</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-text" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                </p>
+
+            {% endif %}
+        <br><br><br>
+        </div>
+    {% endif %}
+
+    <div class="text-start p-3">
+        <details>
+            <summary class="fw-bold pb-3">Not sure what keys to enter?</summary>
+            <ul class="key-bullet">
+                <li>
+                    <span>JTREKYAVOGDXPSNCUIZLFBMWHQ</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-bg" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                </li>
+                <li><span>YTNSHKVEFXRBAUQZCLWDMIPGJO</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-bg" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                <li><span>VCHPRZGJNTLSKFBDQWAXEUYMOI</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-bg" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+                <li><span>NQXPOMAFTRHLZGECYJIUWSKDVB</span>
+                    <button class="btn rounded-circle m-1 shadow-none" id="copy-btn-bg" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy">
+                        <span class="material-symbols-rounded" id="copy-button">content_copy</span>
+                    </button>
+            </ul>
+        </details>
+    </div>
+
+    <div class="text-start p-3">
+        <details>
+            <summary class="fw-bold pb-3">More Details</summary>
+            <ul>
+                <li>Substitution's encryption works by mapping keys to the English alphabet. <a class="link-dark"  href="https://cs50.harvard.edu/x/2022/psets/2/substitution/#background" target="_blank">Know more</a>.</li>
+                <li>This substitution has a encryption and decryption function unlike <a class="link-dark"  href="https://cs50.harvard.edu/x/2022/psets/2/substitution/#background" target="_blank">Week 2 Problem Set 2: Substitution</a> which only has encryption.<a class="link-dark"  href="https://cs50.harvard.edu/x/2022/psets/2/substitution/#background" target="_blank"></a></li>
+            </ul>
+        </details>
+    </div>
+
+    <script src="/static/js/copy-paste-text.js"></script>
+    <script src="/static/js/copy-paste-key.js"></script>
+    <script src="/static/js/activate-tooltips.js"></script>
+
+
+{% endblock %}

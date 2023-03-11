@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+
+        <!-- https://fonts.google.com/ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap" rel="stylesheet">
+        
+        <!-- https://fonts.google.com/icons -->
+        <link href="/static/images/favicon-dark.ico" rel="icon" media="(prefers-color-scheme: light)">
+        <link href="/static/images/favicon-light.ico" rel="icon" media="(prefers-color-scheme: dark)">
+
+        <link href="/static/css/styles.css" rel="stylesheet">
+
+        <title>Compiled 50</title>
+
+    </head>
+
+    <body>
+
+        <div id="title-container">
+            <div id="left-side" class="side"> 
+              <div class="nav-header">
+                <nav class="navbar p-5">
+                  <div class="container-fluid">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link btn rounded-pill dropdown-toggle fs-5" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Projects
+                      </a>
+                      <ul class="dropdown-menu rounded-3" aria-labelledby="navbarDropdown">
+                        {% if session["user_id"] %}
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/mario">Mario</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/credit">Credit</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/scrabble">Scrabble</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/readability">Readability</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/substitution">Substitution</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/plurality">Plurality</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/filter">Filter</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/inheritance">Inheritance</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/trivia">Trivia</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/birthday">Birthday</a></li>
+                        {% else %}
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Mario</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Credit</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Scrabble</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Readability</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Substitution</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Plurality</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Filter</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Inheritance</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Trivia</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Birthday</button></li>
+                        {% endif %}
+                      </ul>
+                    </li>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      {% if session["user_id"] %}
+                        {% if session["user_id"] == 1 %}
+                          <a class="btn btn rounded-pill shadow-none fs-5 px-4 py-2 nav-button-left" href="/logout" role="button">Log Out</a>
+                        {% else %}
+
+                        <!-- Showed when on small screen -->
+                        <li class="nav-item dropdown" id="account-dropdown">
+                          <a class="nav-link rounded-pill dropdown-toggle fs-5" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                          </a>
+                          <ul class="dropdown-menu rounded-3" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item rounded-pill" id="project-item" href="/account">Manage Account</a></li>
+                              <li><a class="dropdown-item rounded-pill" id="project-item" href="/logout">Log out</a></li>
+                          </ul>
+                        </li>
+
+                        <!-- Showed when on big screen -->
+                        <a class="btn btn rounded-pill shadow-none px-4 py-2 fs-5 nav-button-left" href="/account" id="home-account-btn" role="button">Account</a>
+                        <a class="btn btn rounded-pill shadow-none px-4 py-2 fs-5 nav-button-left" href="/logout" id="home-logout-btn" role="button">Log Out</a>
+                        {% endif %}
+                        
+                      {% else %}
+                        <a class="btn btn rounded-pill shadow-none fs-5 px-4 py-2 nav-button-left" href="/signup" id="signup-btn" role="button">Sign Up</a>
+                        <a class="btn btn rounded-pill shadow-none fs-5 px-4 py-2 nav-button-left" href="/login" role="button">Log In</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </nav>
+              </div>
+
+                <h2 class="title">
+                  {% if session["user_id"] %}
+                    <span class="title">Compiled 50</span>
+                    <p class="description">Logged in as {{ username }}</p>
+                  {% else %}
+                    <span class="title">Compiled 50</span>
+                    <p class="description">by Siegfred Lorelle Mina</p>
+                  {% endif %}
+                </h2>
+
+              </div>
+
+
+            <div id="right-side" class="side"> 
+              <div class="nav-header">
+                <nav class="navbar p-5">
+                  <div class="container-fluid">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link rounded-pill dropdown-toggle fs-5" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Projects
+                      </a>
+                      <ul class="dropdown-menu rounded-3" aria-labelledby="navbarDropdown">
+                        {% if session["user_id"] %}
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/mario">Mario</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/credit">Credit</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/scrabble">Scrabble</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/readability">Readability</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/substitution">Substitution</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/plurality">Plurality</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/filter">Filter</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/inheritance">Inheritance</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/trivia">Trivia</a></li>
+                          <li><a class="dropdown-item rounded-pill" id="project-item" href="/birthday">Birthday</a></li>
+                        {% else %}
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Mario</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Credit</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Scrabble</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Readability</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Substitution</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Plurality</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Filter</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Inheritance</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Trivia</button></li>
+                          <li><button type="button" class="btn btn-dark dropdown-item rounded-pill" id="project-item" data-bs-toggle="modal" data-bs-target="#login-modal">Birthday</button></li>
+                        {% endif %}
+                      </ul>
+                    </li>
+
+                    <!-- Modal suggesting to login -->
+                    {% if not session["user_id"] %}
+                      <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="login-modal-label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="login-modal-label">Sorry 😥</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Users must login to access projects.</p>
+                              <p>(Logging in as guest works too!)</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                              <a class="btn btn-dark my-3" href="/login" role="button">Log In</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      {% if session["user_id"] %}
+                        {% if session["user_id"] == 1 %}
+                          <a class="btn btn rounded-pill shadow-none fs-5 px-4 py-2 nav-button-right" href="/logout" role="button">Log Out</a>
+                        {% else %}
+
+                        <!-- Showed when on small screen -->
+                        <li class="nav-item dropdown" id="account-dropdown">
+                          <a class="nav-link rounded-pill dropdown-toggle fs-5" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                          </a>
+                          <ul class="dropdown-menu rounded-3" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item rounded-pill" id="project-item" href="/account">Manage Account</a></li>
+                              <li><a class="dropdown-item rounded-pill" id="project-item" href="/logout">Log out</a></li>
+                          </ul>
+                        </li>
+
+                        <!-- Showed when on big screen -->
+                        <a class="btn btn rounded-pill shadow-none px-4 py-2 fs-5 nav-button-right" href="/account" id="home-account-btn" role="button">Account</a>
+                        <a class="btn btn rounded-pill shadow-none px-4 py-2 fs-5 nav-button-right" href="/logout" id="home-logout-btn" role="button">Log Out</a>
+                        {% endif %}
+
+                      {% else %}
+                        <a class="btn btn rounded-pill shadow-none fs-5 px-4 py-2 nav-button-right" href="/signup" id="signup-btn" role="button">Sign Up</a>
+                        <a class="btn btn rounded-pill shadow-none fs-5 px-4 py-2 nav-button-right" href="/login" role="button">Log In</a>
+                      {% endif %}
+                      </div>
+                  </div>
+                </nav>
+              </div>
+
+
+                <h2 class="title">
+                  {% if session["user_id"] %}
+                    <span class="title">Compiled 50</span>
+                    <p class="description">Logged in as {{ username }}</p>
+                  {% else %}
+                    <span class="title">Compiled 50</span>
+                    <p class="description">for CS50x Final Project</p>
+                  {% endif %}
+                </h2>
+            </div>
+        </div>
+        
+        
+        <div class="container-fluid p-5 text-center">
+            <div class="pb-4">
+                <h1 id="sample-projects">Sample Projects</h1>
+            </div>
+            
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
+              </div>
+
+              <div class="carousel-inner">
+
+                {% if session["user_id"] %}
+                  <div class="carousel-item active" data-bs-interval="2000">
+                    <a href="/mario">
+                      <img src="/static/images/mario.png" class="d-block w-100" alt="Mario">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/credit">
+                      <img src="/static/images/credit.png" class="d-block w-100" alt="Credit">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/scrabble">
+                      <img src="/static/images/scrabble.png" class="d-block w-100" alt="Scrabble">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/readability">
+                      <img src="/static/images/readability.png" class="d-block w-100" alt="Readability">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/substitution">
+                      <img src="/static/images/substitution.png" class="d-block w-100" alt="Substitution">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/plurality">
+                      <img src="/static/images/plurality.png" class="d-block w-100" alt="Plurality">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/filter">
+                      <img src="/static/images/filter.png" class="d-block w-100" alt="Filter">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/inheritance">
+                      <img src="/static/images/inheritance.png" class="d-block w-100" alt="Inheritance">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/trivia">
+                      <img src="/static/images/trivia.png" class="d-block w-100" alt="Trivia">
+                    </a>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a href="/birthday">
+                      <img src="/static/images/birthday.png" class="d-block w-100" alt="Birthday">
+                    </a>
+                  </div>
+
+                <!-- Not logged in -->
+                {% else %}
+                  <div class="carousel-item active" data-bs-interval="2000">
+                      <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/mario.png" class="d-block w-100" alt="Mario">
+                      </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/credit.png" class="d-block w-100" alt="Credit">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/scrabble.png" class="d-block w-100" alt="Scrabble">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/readability.png" class="d-block w-100" alt="Readability">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/substitution.png" class="d-block w-100" alt="Substitution">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/plurality.png" class="d-block w-100" alt="Plurality">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/filter.png" class="d-block w-100" alt="Filter">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/inheritance.png" class="d-block w-100" alt="Inheritance">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/trivia.png" class="d-block w-100" alt="Trivia">
+                    </button>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <img src="/static/images/birthday.png" class="d-block w-100" alt="Birthday">
+                    </button>
+                  </div>
+                {% endif %}
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+            </div>
+        </div>
+
+        </div>
+        <div class="container-fluid p-5 bg-dark mt-auto">
+            <footer>
+              <h4  id="title-footer"><a class="nav-item px-2" href="/">Compiled 50</a></h4>
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a class="nav-link px-2" id="footer-item" href="https://github.com/SiegfredLorelle/compiled-50" target="__blank">Github</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" id="footer-item" href="https://www.facebook.com/profile.php?id=1718881634" target="__blank">Facebook</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" id="footer-item" href="https://www.linkedin.com/in/siegfred-lorelle-mina-b4900b167" target="__blank">LinkedIn</a></li>
+                    <li class="nav-item"><button type="button" class="btn px-0" id="footer-item" data-bs-toggle="modal" data-bs-target="#email-modal">Contact Us</button></li>
+                </ul>
+                <p class="text-center">© <span><script>document.write( new Date().getUTCFullYear() );</script></span> Siegfred Lorelle Mina</p>
+            </footer>
+        </div>
+
+        <!-- Modal for sending message via email -->
+        <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="email-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="email-modal-label">Message for Devs</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="/send_email" method="post">
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="message" class="col-form-label">Message:</label>
+                    <textarea autofocus class="form-control" name="message" id="message"></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <button class="btn btn-dark my-3" type="submit" id="msg-submit-btn">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <script src="/static/js/mouse-track.js"></script>
+        <script src="/static/js/alert-email-sent.js"></script>
+
+    </body>

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Plurality
+{% endblock %}
+
+{% block main %}
+    <h1 class="py-3" id="plurality-title">PLURALITY</h1>
+    <h6>Voting System Simulation</h6><br>
+
+
+    <p class="fs-5 fw-bold pt-5 pb-2">I vote for ...</p>
+    <form action="/plurality/votes" method="post">
+        <select autofocus class="form-select form-select-lg mx-auto w-auto" aria-label=".form-select-lg example" id="vote" name="vote">
+            <option disabled hidden selected>Candidate</option>
+            {% for candidate in candidates %}
+                <option>{{ candidate["full_name"] }}</option>
+            {% endfor %}
+        </select>
+
+
+        <div class="pt-4 p-5 mx-5 mt-4">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+
+        <a class="btn btn-danger m-4" href="/plurality/candidates" id="back-button" role="button">Back</a>
+        <button class="btn btn-dark m-4" type="submit">Next</button>
+    </form>
+
+    {% if candidates_sorted %}
+        <div class="mx-5">
+            <table class="table table-hover caption-top table-sm">
+                <caption>Votes</caption>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Number of Votes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for candidate in candidates_sorted %}
+                        <tr>
+                            <td>{{ candidate["full_name"] }}</td>
+                            <th >{{ candidate["votes"] }}</th>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+    <!-- Uses variable from python flask (cannot be placed in a dedicated js script) -->
+    <script>
+        // Get the number of current candidates and total number of candidates
+        const numberOfVotes= {{ total_votes }}
+        const totalNumberOfVotes = {{ no_voters }}
+
+        // Compute the progress 
+        const progressWidth = (numberOfVotes / totalNumberOfVotes) * 100
+
+        // Get the progress bar's attribute and apply the appropriate progress
+        const progressBar  = document.querySelector(".progress-bar")
+        const progress = progressBar.style.width = `${progressWidth}%`
+    </script>
+
+
+
+{% endblock %}
