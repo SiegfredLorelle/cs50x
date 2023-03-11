@@ -2,17 +2,19 @@
 
 ### Table of Contents
 
-- Description
-    - Technologies
-- Requirements
-- Problem Sets & Labs
-- Credits and References
-- Author Info
+- [Description](#description)
+    - [Technologies](#technologies)
+- [Requirements](#requirements)
+- [Problem Sets & Labs](#problem-sets--labs)
+- [Credits and References](#credits-and-references)
+- [Author Info](#author-info)
 
 ---
 ### Description
 
 [CS50x](https://cs50.harvard.edu/x) is Harvard University's introduction to the intellectual enterprises of computer science and the art of programming. It is an entry-level course, taught by [David J. Malan](https://cs.harvard.edu/malan/), that teaches how to think algorithmically and solve problems efficiently.
+
+Note that this repository only includes problems sets and labs in the course. The [final project](https://github.com/SiegfredLorelle/compiled-50) is excluded since it is in a different repository.
 
 #### Technologies
 
@@ -28,7 +30,7 @@
 
 ### Requirements
 
-The following requirement are only necessary if projects are not run in the [CS50 Codespace](https://cs50.readthedocs.io/code/).
+The following requirement are only necessary if projects are not run in the [CS50 Codespace](https://cs50.readthedocs.io/code/), since the codespace already have them installed (along with other dependencies).
 
 #### General Requirements:
 
@@ -39,51 +41,51 @@ The following requirement are only necessary if projects are not run in the [CS5
 
 #### Specific Requirements:
 
-- Week 9 - Finance and Week 10 - Final Project has more requirements. See more in their respective directories.
+- Week 9 - Finance has more requirements. See more in its respective directory.
 
 ---
 
 ### Problem Sets & Labs
 
 - Week 0 Scratch
-    - Scratch
+    - [Scratch](https://cs50.harvard.edu/x/2022/psets/0/scratch/)
 - Week 1 C
-    - Hello
-    - Mario-more
-    - Credit
+    - [Hello](https://cs50.harvard.edu/x/2022/psets/1/hello/)
+    - [Mario-more](https://cs50.harvard.edu/x/2022/psets/1/mario/more/)
+    - [Credit](https://cs50.harvard.edu/x/2022/psets/1/credit/)
 - Week 2 Arrays
-    - Scrabble
-    - Readability
-    - Substitution
+    - [Scrabble](https://cs50.harvard.edu/x/2022/labs/2/)
+    - [Readability](https://cs50.harvard.edu/x/2022/psets/2/readability/)
+    - [Substitution](https://cs50.harvard.edu/x/2022/psets/2/substitution/)
 - Week 3 Algorithms
-    - Sort
-    - Plurality
-    - Tideman
+    - [Sort](https://cs50.harvard.edu/x/2022/labs/3/)
+    - [Plurality](https://cs50.harvard.edu/x/2022/psets/3/plurality/)
+    - [Tideman](https://cs50.harvard.edu/x/2022/psets/3/tideman/)
 - Week 4 Memory
-    - Volume
-    - Filter-more
-    - Recover
+    - [Volume](https://cs50.harvard.edu/x/2022/labs/4/)
+    - [Filter-more](https://cs50.harvard.edu/x/2022/psets/4/filter/more/)
+    - [Recover](https://cs50.harvard.edu/x/2022/psets/4/recover/)
 - Week 5 Data Structures
-    - Inheritance
-    - Speller
+    - [Inheritance](https://cs50.harvard.edu/x/2022/labs/5/)
+    - [Speller](https://cs50.harvard.edu/x/2022/psets/5/speller/)
 - Week 6 Python
-    - World Cup
-    - Hello
-    - Mario-more
-    - Credit
-    - Readability
-    - DNA
+    - [World Cup](https://cs50.harvard.edu/x/2022/labs/6/)
+    - [Hello](https://cs50.harvard.edu/x/2022/psets/6/hello/)
+    - [Mario-more](https://cs50.harvard.edu/x/2022/psets/6/mario/more/)
+    - [Credit](https://cs50.harvard.edu/x/2022/psets/6/credit/)
+    - [Readability](https://cs50.harvard.edu/x/2022/psets/6/readability/)
+    - [DNA](https://cs50.harvard.edu/x/2022/psets/6/dna/)
 - Week 7 SQL
-    - Songs
-    - Movies
-    - Fiftyville
+    - [Songs](https://cs50.harvard.edu/x/2022/labs/7/)
+    - [Movies](https://cs50.harvard.edu/x/2022/psets/7/movies/)
+    - [Fiftyville](https://cs50.harvard.edu/x/2022/psets/7/fiftyville/)
 - Week 8 HTML, CSS, Javascript
-    - Trivia
-    - Homepage
+    - [Trivia](https://cs50.harvard.edu/x/2022/labs/8/)
+    - [Homepage](https://cs50.harvard.edu/x/2022/psets/8/homepage/)
 - Week 9 Flask
-    - Birthdays
-- Week 10 Emoji
-    - Final Project
+    - [Birthdays](https://cs50.harvard.edu/x/2022/labs/9/)
+    - [Finance](https://cs50.harvard.edu/x/2022/psets/9/finance/)
+- [Final Project](https://github.com/SiegfredLorelle/compiled-50)
 
 ---
 
@@ -105,3 +107,4 @@ Only the answers to problem sets and labs are produced by the [author](#author-i
 
 
 <!-- TODO: LINK EACH PSET AND LABS -->
+<!-- TODO: SEPERATE FINAL PROJ AND REDIRECT TO MY OTHER REPO -->
