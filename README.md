@@ -26,7 +26,7 @@ Note that this repository only includes problem sets and labs in the course. The
 - Bootstrap
 - Flask
 
-[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+[Back to the Top](#harvards-cs50x-2022-problem-sets-and-labs)
 
 ---
 
@@ -45,7 +45,7 @@ The following requirements are only necessary if projects are not run in the [CS
 
 - Week 9 - Finance has more requirements. See more in its respective directory.
 
-[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+[Back to the Top](#harvards-cs50x-2022-problem-sets-and-labs)
 
 ---
 
@@ -91,7 +91,7 @@ The following requirements are only necessary if projects are not run in the [CS
     - [Finance](https://cs50.harvard.edu/x/2022/psets/9/finance/)
 - [Final Project](https://github.com/SiegfredLorelle/compiled-50)
 
-[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+[Back to the Top](#harvards-cs50x-2022-problem-sets-and-labs)
 
 ---
 
@@ -101,7 +101,7 @@ All problem sets and labs, and the entire CS50 course is credited to the [CS50 t
 
 Only the answers to problem sets and labs are produced by the [author](#author-info).
 
-[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+[Back to the Top](#harvards-cs50x-2022-problem-sets-and-labs)
 
 ---
 
@@ -113,4 +113,4 @@ Only the answers to problem sets and labs are produced by the [author](#author-i
 
 - LinkedIn - [Siegfred Lorelle Mina](https://www.linkedin.com/in/siegfred-lorelle-mina-b4900b167)
 
-[Go Back to Top](#harvards-cs50x-2022-problem-sets-and-labs)
+[Back to the Top](#harvards-cs50x-2022-problem-sets-and-labs)
